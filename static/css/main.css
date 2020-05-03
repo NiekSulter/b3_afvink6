@@ -1,0 +1,40 @@
+.hea {
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin: auto;
+}
+ html {
+     color: white;
+     background-color: #2b2b2b;
+     font-family: Arial, sans-serif;
+ }
+
+ table {
+     border-collapse: collapse;
+     width: 50%;
+     margin: auto;
+     padding: 10px;
+
+ }
+
+ th {
+     height: 50px;
+ }
+
+ td {
+     height: 50px;
+     text-align: center;
+ }
+
+table, th, td {
+    border: 1px solid white;
+
+}
+
+.door {
+    padding-left: 90%;
+    height: auto;
+    inline-size: auto;
+}
+
+a { color: white}

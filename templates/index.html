@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Piep</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+<div class="hea">
+    <h2>Piep applicatie</h2>
+    <p class="door">Door: Niek Sülter</p>
+</div>
+    <form method="post">
+    <p>Gebruiker:</p>
+    <input type="text" name="gebr">
+    <p>Wachtwoord:</p>
+    <input type="password" name="wachtw">
+    <p>Zoek op woord of tag</p>
+    <input type="text" name="zoek">
+    <input type="submit" name="submit">
+</form>
+<p><a href="{{ url_for('piep_plaatsen') }}">Piep plaatsen</a></p>
+  <table class="piep_table">
+        <thead>
+        <tr class="piep_header_row">
+            <th>Gepost door:</th>
+            <th>Datum</th>
+            <th>Tijd</th>
+            <th>Post:</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for u, m, d, t in zip(user, messages, dates, time) %}
+        <tr class="piep_result_rows">
+            <td>{{ u }}</td>
+            <td>{{ d }}</td>
+            <td>{{ t }}</td>
+            <td>{{ m | safe}}</td>
+        </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</body>
+</html>

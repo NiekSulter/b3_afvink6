@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Piep plaatsen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+<div class="hea">
+    <h2>Piep plaatsen</h2>
+    <p class="door">Door: Niek Sülter</p>
+</div>
+    <form method="post">
+    <p>Gebruiker:</p>
+    <input type="text" name="plaats-u">
+    <p>Wachtwoord:</p>
+    <input type="password" name="plaats-w">
+    <p>Bericht:</p>
+    <input type="text" name="plaats-b">
+    <input type="submit" name="submit">
+</form>
+</body>
+</html>
