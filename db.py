@@ -37,6 +37,3 @@ def insert_message(username, password, bericht):
     cursor.execute(SQL, val)
 
     conn.commit()
-
-if __name__ == '__main__':
-    insert_message('ymxub', '616623', 'Hello Piep!')
